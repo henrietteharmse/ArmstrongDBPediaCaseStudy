@@ -1,0 +1,66 @@
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://xmlns.com/foaf/0.1/givenName> "Tadeusz" .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://dbpedia.org/ontology/deathDate> "1951-7-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://xmlns.com/foaf/0.1/name> "Tadeusz Borowski" .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://dbpedia.org/ontology/birthDate> "1922-11-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Zhytomyr> .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Warsaw> .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://xmlns.com/foaf/0.1/surname> "Borowski" .
+<http://dbpedia.org/resource/Tadeusz_Borowski> <http://purl.org/dc/terms/description> "Polish writer and journalist" .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://xmlns.com/foaf/0.1/surname> "Yang" .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/J.Trill> <http://xmlns.com/foaf/0.1/givenName> "J." .
+<http://dbpedia.org/resource/J.Trill> <http://xmlns.com/foaf/0.1/name> "J.Trill" .
+<http://dbpedia.org/resource/J.Trill> <http://dbpedia.org/ontology/birthDate> "1989-3-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/J.Trill> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Tifton,_Georgia> .
+<http://dbpedia.org/resource/J.Trill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/J.Trill> <http://xmlns.com/foaf/0.1/surname> "Trill" .
+<http://dbpedia.org/resource/J.Trill> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/J.Trill> <http://purl.org/dc/terms/description> "American rapper" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/givenName> "Francis" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/deathDate> "1933-7-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/name> "Francis Fitzpatrick" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/County_Monaghan> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Glasgow> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/surname> "Fitzpatrick" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://xmlns.com/foaf/0.1/givenName> "William" .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://dbpedia.org/ontology/deathDate> "1839-2-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://xmlns.com/foaf/0.1/name> "William Steuart" .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://dbpedia.org/ontology/birthDate> "1754-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Anne_Arundel_County,_Maryland> .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://xmlns.com/foaf/0.1/surname> "Steuart" .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/William_Steuart_(planter)> <http://purl.org/dc/terms/description> "American planter" .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://xmlns.com/foaf/0.1/givenName> "William" .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://dbpedia.org/ontology/deathDate> "1839-2-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://xmlns.com/foaf/0.1/name> "William Steuart" .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://dbpedia.org/ontology/birthDate> "1754-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Baltimore> .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://xmlns.com/foaf/0.1/surname> "Steuart" .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/William_Steuart_(Mayor_of_Baltimore)> <http://purl.org/dc/terms/description> "American mayor" .
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://xmlns.com/foaf/0.1/name> "Sun Deng" .
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://xmlns.com/foaf/0.1/surname> "Sun" .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://xmlns.com/foaf/0.1/givenName> "Dominic" .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://dbpedia.org/ontology/deathDate> "1978-7-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://xmlns.com/foaf/0.1/name> "Paul McGuire" .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://dbpedia.org/ontology/birthDate> "1903-4-3"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Peterborough,_South_Australia> .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Adelaide> .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Paul_McGuire_(diplomat)> <http://purl.org/dc/terms/description> "Australian diplomat" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/givenName> "Francis" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/deathDate> "1933-7-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/name> "Francis Fitzpatrick" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/County_Monaghan> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Glasgow> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/surname> "Fitzpatrick" .
+<http://dbpedia.org/resource/Francis_Fitzpatrick> <http://xmlns.com/foaf/0.1/gender> "male" .

@@ -1,0 +1,47 @@
+# Compiled class file
+*.class
+
+# Log file
+/logs
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Protege temp files
+catalog-*.xml
+
+# Latex temp files
+*.aux
+*.blg
+*.dvi
+*.out
+*.gz
+*.backup
+*.bbl
+
+# other
+/.recommenders/
+/.settings/
+/.metadata/
+/target/
+.project
+.classpath
+*.~ml
+
+# explicit files to exclude
+Ideas.txt

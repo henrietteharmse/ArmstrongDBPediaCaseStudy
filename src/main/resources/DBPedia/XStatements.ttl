@@ -1,0 +1,52 @@
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://xmlns.com/foaf/0.1/name> "Sun Deng" .
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Sun_Deng_(recluse)> <http://xmlns.com/foaf/0.1/surname> "Sun" .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://xmlns.com/foaf/0.1/surname> "Yang" .
+<http://dbpedia.org/resource/Yang_Kuo-chiang> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Larry_Augustin> <http://xmlns.com/foaf/0.1/givenName> "Larry" .
+<http://dbpedia.org/resource/Larry_Augustin> <http://xmlns.com/foaf/0.1/name> "Larry Augustin" .
+<http://dbpedia.org/resource/Larry_Augustin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Larry_Augustin> <http://xmlns.com/foaf/0.1/surname> "Augustin" .
+<http://dbpedia.org/resource/Larry_Augustin> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Larry_Augustin> <http://purl.org/dc/terms/description> "CEO of SugarCRM and co-founder and former chairman of VA Software" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/givenName> "Valentín" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/name> "Valentyn Symonenko" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://dbpedia.org/ontology/birthDate> "1940-7-4"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Odessa> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://purl.org/dc/terms/description> "Ukrainian statesman" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/givenName> "Valentín" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/name> "Valentyn Symonenko" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://dbpedia.org/ontology/birthDate> "1940-7-4"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Odessa> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Valentyn_Symonenko> <http://purl.org/dc/terms/description> "Ukrainian statesman" .
+<http://dbpedia.org/resource/Myron_V._George> <http://xmlns.com/foaf/0.1/givenName> "Myron" .
+<http://dbpedia.org/resource/Myron_V._George> <http://dbpedia.org/ontology/deathDate> "1972-4-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Myron_V._George> <http://xmlns.com/foaf/0.1/name> "Myron V. George" .
+<http://dbpedia.org/resource/Myron_V._George> <http://dbpedia.org/ontology/birthDate> "1900-1-6"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Myron_V._George> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Myron_V._George> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Myron_V._George> <http://purl.org/dc/terms/description> "American politician" .
+<http://dbpedia.org/resource/Tiraios_I> <http://dbpedia.org/ontology/deathDate> "-100-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tiraios_I> <http://xmlns.com/foaf/0.1/name> "Tiraios I" .
+<http://dbpedia.org/resource/Tiraios_I> <http://dbpedia.org/ontology/birthDate> "-200-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tiraios_I> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Tiraios_I> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Tiraios_I> <http://dbpedia.org/ontology/deathDate> "-100-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tiraios_I> <http://xmlns.com/foaf/0.1/name> "Tiraios I" .
+<http://dbpedia.org/resource/Tiraios_I> <http://dbpedia.org/ontology/birthDate> "-200-1-1"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Tiraios_I> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Tiraios_I> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://xmlns.com/foaf/0.1/givenName> "Karel" .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://dbpedia.org/ontology/deathDate> "1927-11-3"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://xmlns.com/foaf/0.1/name> "Karel Matěj Čapek-Chod" .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://dbpedia.org/ontology/birthDate> "1860-2-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Domažlice> .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Prague> .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://xmlns.com/foaf/0.1/gender> "male" .
+<http://dbpedia.org/resource/Karel_Matěj_Čapek-Chod> <http://purl.org/dc/terms/description> "Czech writer and journalist" .
