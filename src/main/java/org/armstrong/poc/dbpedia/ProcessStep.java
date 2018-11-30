@@ -35,9 +35,9 @@ public abstract class ProcessStep {
   protected String strC = null;  
   protected Set<String> setS; 
   protected Set<String> setX;
-  protected Set<Set<String>> agreementSets = null;
-  protected Set<Set<String>> maximalAgreementSets = null;
-  protected Set<Set<String>> disagreementSets = null;
+  protected Set<Set<String>> strongAgreementSets = null;
+  protected Set<Set<String>> maximalStrongAgreementSets = null;
+  protected Set<Set<String>> weakDisagreementSets = null;
   protected Set<Set<String>> necessaryDisagreementSets = null;
   protected Set<Set<String>> uniquenessConstraints = null;
   protected Set<Set<String>> antiKeys = null;
@@ -355,16 +355,16 @@ public abstract class ProcessStep {
     return setX;
   }
 
-  public Set<Set<String>> getAgreementSets() {
-    return agreementSets;
+  public Set<Set<String>> getStrongAgreementSets() {
+    return strongAgreementSets;
   }  
   
-  public Set<Set<String>> getMaximalAgreementSets() {
-    return maximalAgreementSets;
+  public Set<Set<String>> getMaximalStrongAgreementSets() {
+    return maximalStrongAgreementSets;
   }
 
-  public Set<Set<String>> getDisagreementSets() {
-    return disagreementSets;
+  public Set<Set<String>> getWeakDisagreementSets() {
+    return weakDisagreementSets;
   }
 
   public Set<Set<String>> getNecessaryDisagreementSets() {

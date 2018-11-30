@@ -18,21 +18,21 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-public class DetermineFirstTuple extends ProcessStep {
+public class DealWithFirstTuple extends ProcessStep {
   private static Logger logger = LoggerFactory.getLogger(DealWithAntiKeys.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
   public static final String UNIQUENESS_CONSTRAINTS_STATEMENTS_FILE = 
-      "/src/main/resources/UniquenessConstraintStatements.ttl";
+      "/src/main/resources/FirstTupleStatements.ttl";
   
-  public DetermineFirstTuple(String strFile) {
+  public DealWithFirstTuple(String strFile) {
     super(strFile);
   }
 
   @Override
   public void read() {
-    uniquenessConstraints = readSetOfSets(DetermineUniquenessConstraints.SHEET_UNIQUENESS_CONSTRAINTS, uniquenessConstraints); 
+    uniquenessConstraints = readSetOfSets(DetermineSigma.SHEET_UNIQUENESS_CONSTRAINTS, uniquenessConstraints); 
   }
   
   @Override
@@ -106,9 +106,9 @@ public class DetermineFirstTuple extends ProcessStep {
     strC = determineAntiKeys.getStrC();
     setS = determineAntiKeys.getSetS();
     setX = determineAntiKeys.getSetX();
-    agreementSets = determineAntiKeys.getAgreementSets();
-    maximalAgreementSets = determineAntiKeys.getMaximalAgreementSets();
-    disagreementSets = determineAntiKeys.getDisagreementSets();
+    strongAgreementSets = determineAntiKeys.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineAntiKeys.getMaximalStrongAgreementSets();
+    weakDisagreementSets = determineAntiKeys.getWeakDisagreementSets();
     necessaryDisagreementSets = determineAntiKeys.getNecessaryDisagreementSets();
     uniquenessConstraints = determineAntiKeys.getUniquenessConstraints();
     antiKeys = determineAntiKeys.getAntiKeys();
@@ -126,7 +126,7 @@ public class DetermineFirstTuple extends ProcessStep {
     String strFile  = path.toFile().getAbsolutePath() + LOCATION + args[0];
 
     try {
-      DetermineFirstTuple dealWithUniquenessConstraints = new DetermineFirstTuple(strFile);
+      DealWithFirstTuple dealWithUniquenessConstraints = new DealWithFirstTuple(strFile);
       dealWithUniquenessConstraints.execute();
     } catch (Throwable t) {
       logger.error(WTF_MARKER, t.getMessage(), t);

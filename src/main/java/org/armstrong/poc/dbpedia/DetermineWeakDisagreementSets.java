@@ -10,22 +10,22 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-public class DetermineDisagreementSets extends ProcessStep {
+public class DetermineWeakDisagreementSets extends ProcessStep {
   
-  private static Logger logger = LoggerFactory.getLogger(DetermineDisagreementSets.class);
+  private static Logger logger = LoggerFactory.getLogger(DetermineWeakDisagreementSets.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
-  public static final String SHEET_DISAGREEMENT_SETS = "DisagreementSets";
+  public static final String SHEET_DISAGREEMENT_SETS = "WeakDisagreementSets";
   
-  public DetermineDisagreementSets(String strFile) {
+  public DetermineWeakDisagreementSets(String strFile) {
     super(strFile);
   } 
   
   @Override
   public void read() {
-    maximalAgreementSets = readSetOfSets(DetermineMaximalAgreementSets.SHEET_MAXIMAL_AGREEMENT_SETS, 
-        SHEET_DISAGREEMENT_SETS, maximalAgreementSets);
+    maximalStrongAgreementSets = readSetOfSets(DetermineStrongMaximalAgreementSets.SHEET_MAXIMAL_AGREEMENT_SETS, 
+        SHEET_DISAGREEMENT_SETS, maximalStrongAgreementSets);
   }  
   
   @Override
@@ -34,30 +34,30 @@ public class DetermineDisagreementSets extends ProcessStep {
       return;
     }
     
-    disagreementSets = new HashSet<Set<String>>();
-    for (Set<String> agreementSet : maximalAgreementSets) {
+    weakDisagreementSets = new HashSet<Set<String>>();
+    for (Set<String> agreementSet : maximalStrongAgreementSets) {
       Set<String> disagreementSet = new HashSet<String>();
       disagreementSet.addAll(setS);
       disagreementSet.removeAll(agreementSet);
-      disagreementSets.add(disagreementSet);
+      weakDisagreementSets.add(disagreementSet);
     }
     isProcessed = true;
   }
   
   @Override
   public void write() {
-    writeSetOfSets(SHEET_DISAGREEMENT_SETS, disagreementSets);
+    writeSetOfSets(SHEET_DISAGREEMENT_SETS, weakDisagreementSets);
   }
   
   @Override
   public void execute() {
-    DetermineMaximalAgreementSets determineMaximalAgreementSets = new DetermineMaximalAgreementSets(strFile);
+    DetermineStrongMaximalAgreementSets determineMaximalAgreementSets = new DetermineStrongMaximalAgreementSets(strFile);
     determineMaximalAgreementSets.execute();
     
     strC = determineMaximalAgreementSets.getStrC();
     setS = determineMaximalAgreementSets.getSetS();
-    agreementSets = determineMaximalAgreementSets.getAgreementSets();
-    maximalAgreementSets = determineMaximalAgreementSets.getMaximalAgreementSets();
+    strongAgreementSets = determineMaximalAgreementSets.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineMaximalAgreementSets.getMaximalStrongAgreementSets();
     
     super.execute();    
   }
@@ -71,7 +71,7 @@ public class DetermineDisagreementSets extends ProcessStep {
     String strFile  = path.toFile().getAbsolutePath() + LOCATION + args[0];
 
     try {
-      DetermineDisagreementSets determineDisagreementSets = new DetermineDisagreementSets(strFile);
+      DetermineWeakDisagreementSets determineDisagreementSets = new DetermineWeakDisagreementSets(strFile);
       determineDisagreementSets.execute();
     } catch (Throwable t) {
       logger.error(WTF_MARKER, t.getMessage(), t);

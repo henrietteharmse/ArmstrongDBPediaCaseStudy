@@ -27,7 +27,7 @@ public class DetermineAntiKeys extends ProcessStep {
 
   @Override
   public void read() {
-    uniquenessConstraints = readSetOfSets(DetermineUniquenessConstraints.SHEET_UNIQUENESS_CONSTRAINTS, 
+    uniquenessConstraints = readSetOfSets(DetermineSigma.SHEET_UNIQUENESS_CONSTRAINTS, 
         SHEET_ANTI_KEYS, uniquenessConstraints);  
   }
 
@@ -58,15 +58,15 @@ public class DetermineAntiKeys extends ProcessStep {
   
   @Override
   public void execute() {
-    DetermineUniquenessConstraints determineUniquenessConstraints = 
-        new DetermineUniquenessConstraints(strFile);
+    DetermineSigma determineUniquenessConstraints = 
+        new DetermineSigma(strFile);
     determineUniquenessConstraints.execute();
     
     strC = determineUniquenessConstraints.getStrC();
     setS = determineUniquenessConstraints.getSetS();
-    agreementSets = determineUniquenessConstraints.getAgreementSets();
-    maximalAgreementSets = determineUniquenessConstraints.getMaximalAgreementSets();
-    disagreementSets = determineUniquenessConstraints.getDisagreementSets();
+    strongAgreementSets = determineUniquenessConstraints.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineUniquenessConstraints.getMaximalStrongAgreementSets();
+    weakDisagreementSets = determineUniquenessConstraints.getWeakDisagreementSets();
     necessaryDisagreementSets = determineUniquenessConstraints.getNecessaryDisagreementSets();
     uniquenessConstraints = determineUniquenessConstraints.getUniquenessConstraints();
     
@@ -87,9 +87,9 @@ public class DetermineAntiKeys extends ProcessStep {
       determineAntiKeys.execute();
       logger.debug("Antikeys = " + determineAntiKeys.getAntiKeys());
       logger.debug("Compare AntiKeys and MaxAgreement sets = " + 
-          determineAntiKeys.getAntiKeys().containsAll(determineAntiKeys.getMaximalAgreementSets()));
+          determineAntiKeys.getAntiKeys().containsAll(determineAntiKeys.getMaximalStrongAgreementSets()));
       logger.debug("Compare  MaxAgreement sets and AntiKeys = " + 
-          determineAntiKeys.getMaximalAgreementSets().containsAll(determineAntiKeys.getAntiKeys()));
+          determineAntiKeys.getMaximalStrongAgreementSets().containsAll(determineAntiKeys.getAntiKeys()));
     } catch (Throwable t) {
       logger.error(WTF_MARKER, t.getMessage(), t);
     }

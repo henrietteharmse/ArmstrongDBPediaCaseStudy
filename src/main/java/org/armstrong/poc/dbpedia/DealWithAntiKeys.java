@@ -110,15 +110,15 @@ public class DealWithAntiKeys extends ProcessStep {
   
   @Override
   public void execute() {
-    DetermineFirstTuple determineFirstTuple = new DetermineFirstTuple(strFile);
+    DealWithFirstTuple determineFirstTuple = new DealWithFirstTuple(strFile);
     determineFirstTuple.execute();
     
     strC = determineFirstTuple.getStrC();
     setS = determineFirstTuple.getSetS();
     setX = determineFirstTuple.getSetX();
-    agreementSets = determineFirstTuple.getAgreementSets();
-    maximalAgreementSets = determineFirstTuple.getMaximalAgreementSets();
-    disagreementSets = determineFirstTuple.getDisagreementSets();
+    strongAgreementSets = determineFirstTuple.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineFirstTuple.getMaximalStrongAgreementSets();
+    weakDisagreementSets = determineFirstTuple.getWeakDisagreementSets();
     necessaryDisagreementSets = determineFirstTuple.getNecessaryDisagreementSets();
     uniquenessConstraints = determineFirstTuple.getUniquenessConstraints();
     antiKeys = determineFirstTuple.getAntiKeys();

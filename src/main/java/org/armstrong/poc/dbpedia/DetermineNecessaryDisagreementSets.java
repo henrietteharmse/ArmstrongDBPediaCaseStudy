@@ -23,8 +23,8 @@ public class DetermineNecessaryDisagreementSets extends ProcessStep {
 
   @Override
   public void read() {
-    disagreementSets = readSetOfSets(DetermineDisagreementSets.SHEET_DISAGREEMENT_SETS, 
-        SHEET_NECESSARY_DISAGREEMENT_SETS, disagreementSets);
+    weakDisagreementSets = readSetOfSets(DetermineWeakDisagreementSets.SHEET_DISAGREEMENT_SETS, 
+        SHEET_NECESSARY_DISAGREEMENT_SETS, weakDisagreementSets);
     
   }
 
@@ -35,9 +35,9 @@ public class DetermineNecessaryDisagreementSets extends ProcessStep {
     }
     
     necessaryDisagreementSets = new HashSet<Set<String>>();
-    necessaryDisagreementSets.addAll(disagreementSets);
+    necessaryDisagreementSets.addAll(weakDisagreementSets);
     
-    for (Set<String> disagreementSet1 : disagreementSets) {
+    for (Set<String> disagreementSet1 : weakDisagreementSets) {
       Set<Set<String>> disagreementSetsToRemove = new HashSet<Set<String>>();
       for (Set<String> disagreementSet2 : necessaryDisagreementSets) {
         if (!disagreementSet1.equals(disagreementSet2)) {
@@ -65,14 +65,14 @@ public class DetermineNecessaryDisagreementSets extends ProcessStep {
       return;
     }
     
-    DetermineDisagreementSets determineDisagreementSets = new DetermineDisagreementSets(strFile);
+    DetermineWeakDisagreementSets determineDisagreementSets = new DetermineWeakDisagreementSets(strFile);
     determineDisagreementSets.execute();
     
     strC = determineDisagreementSets.getStrC();
     setS = determineDisagreementSets.getSetS();
-    agreementSets = determineDisagreementSets.getAgreementSets();
-    maximalAgreementSets = determineDisagreementSets.getMaximalAgreementSets();
-    disagreementSets = determineDisagreementSets.getDisagreementSets();
+    strongAgreementSets = determineDisagreementSets.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineDisagreementSets.getMaximalStrongAgreementSets();
+    weakDisagreementSets = determineDisagreementSets.getWeakDisagreementSets();
     
     super.execute();    
   } 

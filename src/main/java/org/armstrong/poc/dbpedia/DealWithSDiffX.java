@@ -20,14 +20,14 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-public class DealWithZ extends ProcessStep {
-  private static Logger logger = LoggerFactory.getLogger(DealWithAntiKeys.class);
+public class DealWithSDiffX extends ProcessStep {
+  private static Logger logger = LoggerFactory.getLogger(DealWithSDiffX.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
-  public static final String X_STATEMENTS_FILE = "/src/main/resources/XStatements.ttl";
+  public static final String X_STATEMENTS_FILE = "/src/main/resources/SDiffXStatements.ttl";
   
-  public DealWithZ(String strFile) {
+  public DealWithSDiffX(String strFile) {
     super(strFile);
   }
 
@@ -114,9 +114,9 @@ public class DealWithZ extends ProcessStep {
     strC = dealWithAntiKeys.getStrC();
     setS = dealWithAntiKeys.getSetS();
     setX = dealWithAntiKeys.getSetX();
-    agreementSets = dealWithAntiKeys.getAgreementSets();
-    maximalAgreementSets = dealWithAntiKeys.getMaximalAgreementSets();
-    disagreementSets = dealWithAntiKeys.getDisagreementSets();
+    strongAgreementSets = dealWithAntiKeys.getStrongAgreementSets();
+    maximalStrongAgreementSets = dealWithAntiKeys.getMaximalStrongAgreementSets();
+    weakDisagreementSets = dealWithAntiKeys.getWeakDisagreementSets();
     necessaryDisagreementSets = dealWithAntiKeys.getNecessaryDisagreementSets();
     uniquenessConstraints = dealWithAntiKeys.getUniquenessConstraints();
     antiKeys = dealWithAntiKeys.getAntiKeys();
@@ -136,7 +136,7 @@ public class DealWithZ extends ProcessStep {
     try {
       long nStartTime = System.currentTimeMillis();  
       logger.debug("START = " + nStartTime); 
-      DealWithZ dealWithX = new DealWithZ(strFile);
+      DealWithSDiffX dealWithX = new DealWithSDiffX(strFile);
       dealWithX.execute();
       long nStopTime = System.currentTimeMillis();
       logger.debug("END = " + nStopTime);

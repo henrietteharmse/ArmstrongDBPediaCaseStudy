@@ -12,14 +12,14 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-public class DetermineUniquenessConstraints extends ProcessStep {
-  private static Logger logger = LoggerFactory.getLogger(DetermineUniquenessConstraints.class);
+public class DetermineSigma extends ProcessStep {
+  private static Logger logger = LoggerFactory.getLogger(DetermineSigma.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
   public static final String SHEET_UNIQUENESS_CONSTRAINTS = "UniquenessConstraints";
   
-  public DetermineUniquenessConstraints(String strFile) {
+  public DetermineSigma(String strFile) {
     super(strFile);
   }
 
@@ -49,15 +49,15 @@ public class DetermineUniquenessConstraints extends ProcessStep {
   
   @Override
   public void execute() {
-    DetermineNecessaryDisagreementSets determineNecessaryDisagreementSetsDisagreementSets = new DetermineNecessaryDisagreementSets(strFile);
-    determineNecessaryDisagreementSetsDisagreementSets.execute();
+    DetermineNecessaryDisagreementSets determineNecessaryDisagreementSets = new DetermineNecessaryDisagreementSets(strFile);
+    determineNecessaryDisagreementSets.execute();
     
-    strC = determineNecessaryDisagreementSetsDisagreementSets.getStrC();
-    setS = determineNecessaryDisagreementSetsDisagreementSets.getSetS();
-    agreementSets = determineNecessaryDisagreementSetsDisagreementSets.getAgreementSets();
-    maximalAgreementSets = determineNecessaryDisagreementSetsDisagreementSets.getMaximalAgreementSets();
-    disagreementSets = determineNecessaryDisagreementSetsDisagreementSets.getDisagreementSets();
-    necessaryDisagreementSets = determineNecessaryDisagreementSetsDisagreementSets.getNecessaryDisagreementSets();
+    strC = determineNecessaryDisagreementSets.getStrC();
+    setS = determineNecessaryDisagreementSets.getSetS();
+    strongAgreementSets = determineNecessaryDisagreementSets.getStrongAgreementSets();
+    maximalStrongAgreementSets = determineNecessaryDisagreementSets.getMaximalStrongAgreementSets();
+    weakDisagreementSets = determineNecessaryDisagreementSets.getWeakDisagreementSets();
+    necessaryDisagreementSets = determineNecessaryDisagreementSets.getNecessaryDisagreementSets();
     
     super.execute();    
   }   
@@ -72,7 +72,7 @@ public class DetermineUniquenessConstraints extends ProcessStep {
     String strFile  = path.toFile().getAbsolutePath() + LOCATION + args[0];
 
     try {
-      DetermineUniquenessConstraints determineUniquenessConstraints = new DetermineUniquenessConstraints(strFile);
+      DetermineSigma determineUniquenessConstraints = new DetermineSigma(strFile);
       determineUniquenessConstraints.execute();
       logger.debug("UniquenessConstraints = " + determineUniquenessConstraints.getUniquenessConstraints());
     } catch (Throwable t) {

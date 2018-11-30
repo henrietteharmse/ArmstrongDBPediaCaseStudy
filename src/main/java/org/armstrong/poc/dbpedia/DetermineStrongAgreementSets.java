@@ -31,16 +31,16 @@ import org.slf4j.MarkerFactory;
 
 import com.google.common.collect.Sets;
 
-public class DetermineAgreementSets extends ProcessStep {
+public class DetermineStrongAgreementSets extends ProcessStep {
   
-  private static Logger logger = LoggerFactory.getLogger(DetermineAgreementSets.class);
+  private static Logger logger = LoggerFactory.getLogger(DetermineStrongAgreementSets.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
-  public static final String SHEET_AGREEMENT_SETS = "AgreementSets";
+  public static final String SHEET_AGREEMENT_SETS = "StrongAgreementSets";
   
   
-  public DetermineAgreementSets(String strFile) {
+  public DetermineStrongAgreementSets(String strFile) {
     super(strFile);
   }  
   
@@ -51,7 +51,7 @@ public class DetermineAgreementSets extends ProcessStep {
   
   @Override
   public void write() {
-    writeSetOfSets(SHEET_AGREEMENT_SETS, agreementSets);
+    writeSetOfSets(SHEET_AGREEMENT_SETS, strongAgreementSets);
   }  
   
   @Override
@@ -62,7 +62,7 @@ public class DetermineAgreementSets extends ProcessStep {
     
     Set<Set<String>> powersetOfS = Sets.powerSet(setS);
     Map<String, String> iriToQueryParamMap = QueryUtils.generateQueryParameters(setS);
-    agreementSets = new HashSet<Set<String>>();
+    strongAgreementSets = new HashSet<Set<String>>();
     
     int nProgressTracker = 0;
     for (Set<String> set : powersetOfS) {  
@@ -100,7 +100,7 @@ public class DetermineAgreementSets extends ProcessStep {
         logger.debug("query duration = " + (nStopTime - nStartTime)/1000/60 + " minutes or " + (nStopTime - nStartTime)/1000 + " seconds.");
         
         if (bFound) {
-          agreementSets.add(set);
+          strongAgreementSets.add(set);
         }
         
         qe.close();
@@ -146,7 +146,7 @@ public class DetermineAgreementSets extends ProcessStep {
     String strFile  = path.toFile().getAbsolutePath() + LOCATION + args[0];
 
     try {
-      DetermineAgreementSets determineAgreementSets = new DetermineAgreementSets(strFile);
+      DetermineStrongAgreementSets determineAgreementSets = new DetermineStrongAgreementSets(strFile);
       determineAgreementSets.execute();
     } catch (Throwable t) {
       logger.error(WTF_MARKER, t.getMessage(), t);

@@ -10,20 +10,20 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-public class DetermineMaximalAgreementSets extends ProcessStep {
-  private static Logger logger = LoggerFactory.getLogger(DetermineMaximalAgreementSets.class);
+public class DetermineStrongMaximalAgreementSets extends ProcessStep {
+  private static Logger logger = LoggerFactory.getLogger(DetermineStrongMaximalAgreementSets.class);
   // Why This Failure marker
   private static final Marker WTF_MARKER = MarkerFactory.getMarker("WTF");
   
-  public static final String SHEET_MAXIMAL_AGREEMENT_SETS = "MaximalAgreementSets";
+  public static final String SHEET_MAXIMAL_AGREEMENT_SETS = "MaximalStrongAgreementSets";
   
-  public DetermineMaximalAgreementSets(String strFile) {
+  public DetermineStrongMaximalAgreementSets(String strFile) {
     super(strFile);
   }
 
   @Override
   public void read() {
-    agreementSets = readSetOfSets(DetermineAgreementSets.SHEET_AGREEMENT_SETS, SHEET_MAXIMAL_AGREEMENT_SETS, agreementSets);  
+    strongAgreementSets = readSetOfSets(DetermineStrongAgreementSets.SHEET_AGREEMENT_SETS, SHEET_MAXIMAL_AGREEMENT_SETS, strongAgreementSets);  
   }
 
   @Override
@@ -32,12 +32,12 @@ public class DetermineMaximalAgreementSets extends ProcessStep {
       return;
     }
     
-    maximalAgreementSets = new HashSet<Set<String>>();
-    maximalAgreementSets.addAll(agreementSets);
+    maximalStrongAgreementSets = new HashSet<Set<String>>();
+    maximalStrongAgreementSets.addAll(strongAgreementSets);
     
-    for (Set<String> agreementSet1 : agreementSets) {
+    for (Set<String> agreementSet1 : strongAgreementSets) {
       Set<Set<String>> agreementSetsToRemove = new HashSet<Set<String>>();
-      for (Set<String> agreementSet2 : maximalAgreementSets) {
+      for (Set<String> agreementSet2 : maximalStrongAgreementSets) {
         if (!agreementSet1.equals(agreementSet2)) {
           if (agreementSet1.containsAll(agreementSet2)) {
             agreementSetsToRemove.add(agreementSet2);
@@ -45,7 +45,7 @@ public class DetermineMaximalAgreementSets extends ProcessStep {
         }
       }
       if (!agreementSetsToRemove.isEmpty()) {
-        maximalAgreementSets.removeAll(agreementSetsToRemove);
+        maximalStrongAgreementSets.removeAll(agreementSetsToRemove);
       }
     }
     isProcessed = true;
@@ -53,17 +53,17 @@ public class DetermineMaximalAgreementSets extends ProcessStep {
 
   @Override
   public void write() {
-    writeSetOfSets(SHEET_MAXIMAL_AGREEMENT_SETS, maximalAgreementSets);    
+    writeSetOfSets(SHEET_MAXIMAL_AGREEMENT_SETS, maximalStrongAgreementSets);    
   }
 
   @Override
   public void execute() {
-    DetermineAgreementSets determineAgreementSet = new DetermineAgreementSets(strFile);
+    DetermineStrongAgreementSets determineAgreementSet = new DetermineStrongAgreementSets(strFile);
     determineAgreementSet.execute();
     
     strC = determineAgreementSet.getStrC();
     setS = determineAgreementSet.getSetS();
-    agreementSets = determineAgreementSet.getAgreementSets();
+    strongAgreementSets = determineAgreementSet.getStrongAgreementSets();
     
     super.execute();    
   }
@@ -77,7 +77,7 @@ public class DetermineMaximalAgreementSets extends ProcessStep {
     String strFile  = path.toFile().getAbsolutePath() + LOCATION + args[0];
 
     try {
-      DetermineMaximalAgreementSets determineMaximalAgreementSets = new DetermineMaximalAgreementSets(strFile);
+      DetermineStrongMaximalAgreementSets determineMaximalAgreementSets = new DetermineStrongMaximalAgreementSets(strFile);
       determineMaximalAgreementSets.execute();
     } catch (Throwable t) {
       logger.error(WTF_MARKER, t.getMessage(), t);
